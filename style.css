@@ -333,11 +333,11 @@ li:hover {
 }
 
 .card img:hover {
-      transform: scale(1.1) rotateY(5deg);
+      transform: scale(1.3) rotateY(5deg);
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
       filter: brightness(1.1) saturate(1.2);
       transition: transform 0.3s ease-in-out, box-shadow 0.2s ease-out;
-      transform: scale(1.1) rotateY(3deg) rotateX(-2deg);
+      transform: scale(1.3) rotateY(3deg) rotateX(-2deg);
 }
    
  

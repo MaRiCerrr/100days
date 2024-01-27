@@ -179,8 +179,8 @@ video:hover {
 #music-player {
       background-color: #ffcccc; /* Soft pink */
       border-radius: 15px;
+      width: 400px;
       margin-left: 300px;
-      width: 400px; /* Chiều rộng cụ thể */
   }
   
 #music-info,
@@ -340,20 +340,29 @@ li:hover {
 }
    
  
-@media (max-width: 768px) {
+@media (max-width: 428px) {
       h1{
             grid-column: span 12;
+            width: 100%;
       }
 
       #clock-box {
+            display: flex;
             grid-column: span 12;
-            margin-right: 75px;
+            width: 100%;
+            margin-right: 100px;
+      }
+      #clock {
+            grid-column: span 12;
+            width: 100%;
+      }
+      date, time {
+            font-size: 20px;
       }
       .avt {
             width: 120px;
             grid-column: span 12;
-        }
-      #clock,
+      }
       #info .one,
       #info .two,
       #heart,
@@ -369,13 +378,15 @@ li:hover {
       }
 
       #music-player {
-            max-width: 400px ;
+            width: 100%;
             grid-column: span 12;
             display: flex;
-            margin-left: 60px;
+            margin-left: 0px;
             border-radius: 10px;
             background-color: #f59a9a;
-
+            justify-content: center;
+            text-align: center;
+            
       }
       #controls,
       #playlist {
@@ -413,7 +424,7 @@ li:hover {
         }
         
         video {
-            max-width: calc(45%);
+            max-width: calc(40%);
         }
       footer {
             grid-column: span 12;

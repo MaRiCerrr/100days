@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="respon.css">
+      <link rel="shortcut icon" type="image/png" href="./img/favicon.png"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      
+
+      <title>100 DAYS</title>
+</head>
+<body>
+     <div id="wrapper">
+           <!-- 1. Tiêu đề -->
+           <h1>TRẢI QUA</h1>
+
+           <div id="clock-box">
+                 <div id="clock">
+                       <!-- Nơi hiển thì số ngày yêu nhau (bạn không cân thay đổi gì cũng được) -->
+                       <date>0 Ngày</date>
+                       <time>00:00:00</time>
+                  </div>
+            </div>
+            
+            <div id="info">
+                  <div class="one">
+                        <!-- 3. Ảnh của bạn nam -->
+                        <img src="img/male.jpg" class="avt">
+                        <!-- 4. Tên bạn nam -->
+                        <p>Bùi Anh Việt</p>
+                  </div>
+                  <div id="heart">
+                        ❤<anni>...</anni>
+                  </div>
+                  <div class="two">
+                        <!-- 5. Ảnh của bạn nữ -->
+                        <img src="img/female.jpg" class="avt">
+
+                        <!-- 6. Tên của bạn nữ -->
+                        <p>Võ Lê Minh Viên</p>
+                  </div>
+            </div>
+
+            <div id="music-player">
+                  <audio id="audio"></audio>
+                  <div id="music-info">
+                      <img id="album-art" src="placeholder-image.jpg" alt="Album Art">
+                      <div id="song-details">
+                          <h2 id="song-title">Tên bài hát</h2>
+                          <p id="artist">Ca sĩ</p>
+                      </div>
+                  </div>
+              
+                  <div id="controls">
+                        <div id="time-info">
+                              <span id="current-time">00:00</span> / <span id="total-duration">00:00</span>
+                        </div>
+                        <input type="range" id="seek-bar" value="0">
+                        <button id="prev"><i class="fa-solid fa-backward"></i></button>
+                        <button id="play-pause"><i class="fa-solid fa-play"></i></button>
+                        <button id="next"><i class="fa-solid fa-forward"></i></button><br>
+                        <button id="volume"><i class="fa-solid fa-volume-up"></i></button>
+                        <input type="range" id="volume-bar" value="100">
+                  </div>
+                  
+                  <div id="playlist">
+                        <ul>
+                              <li data-src="music/duongtoichoemve.mp3" data-title="Đường Tôi Chở Em Về" data-artist="Artist: Bùi Trường Linh" data-image="imgplaylist/duongtoichoemve.jpg">
+                                    Đường Tôi Chở Em Về</li>
+                              <li data-src="music/bandoi.mp3" data-title="Bạn Đời" data-artist="Artist: Karik x Gducky" data-image="imgplaylist/bandoi.jpg">
+                                    Bạn Đời</li>
+                              <li data-src="music/anhlangoailecuaem.mp3" data-title="Anh Là Ngoại Lệ Của Em" data-artist="Artist: Phương Ly" data-image="imgplaylist/anhlangoailecuaem.jpg">
+                                    Anh Là Ngoại Lệ Của Em</li>
+                              <li data-src="music/catdoinoisau.mp3" data-title="Cắt Đôi Nỗi Sầu" data-artist="Artist: Tăng Duy Tân" data-image="imgplaylist/catdoinoisau.jpg">
+                                    Cắt Đôi Nỗi Sầu</li>
+                              <li data-src="music/cohenvoithanhxuan.mp3" data-title="Có Hẹn Với Thanh Xuân" data-artist="Artist: Monstar" data-image="imgplaylist/cohenvoithanhxuan.jpg">
+                                    Có Hẹn Với Thanh Xuân</li>
+                              <li data-src="music/duchomaivesau.mp3" data-title="Dù Cho Mai Về Sau" data-artist="Artist: Bùi Trường Linh" data-image="imgplaylist/duchomaivesau.jpg">
+                                    Dù Cho Mai Về Sau</li>
+                              <li data-src="music/emxinh.mp3" data-title="Em Xinh" data-artist="Artist: Mono" data-image="imgplaylist/emxinh.jpg">
+                                    Em Xinh</li>
+                              <li data-src="music/khongthesay.mp3" data-title="Không Thể Say" data-artist="Artist: Hiếu Thứ Hai" data-image="imgplaylist/khongthesay.jpg">
+                                    Không Thể Say</li>
+                              <li data-src="music/roitasengamphaohoacungnhau.mp3" data-title="Artist: Rồi Ta Sẽ Ngắm Pháo Hoa Cùng Nhau" data-artist="O.lew" data-image="
+                              imgplaylist/roitasengamphaohoacungnhau.jpg">
+                                    Rồi Ta Sẽ Ngắm Pháo Hoa Cùng Nhau</li>      
+                        </ul>
+                  </div>
+            </div>
+
+            <div id="memories">
+                  <hr id="line">
+                  <h1>KỶ NIỆM</h1>
+                  
+                  <div id="video-player">
+                        <div class="video-container"></div>
+                        <div id="control-video">
+                              <button onclick="preVideos()"><i class="fas fa-step-backward"></i></button>
+                              <button onclick="nextVideos()"><i class="fas fa-step-forward"></i></button>
+                        </div>
+                  </div>
+
+                  <div class="card"></div>     
+            </div>
+            
+            <!-- 7. Tiêu đề bên dưới -->
+            <footer>💕 Cảm ơn vì khoảng thời gian ta bên nhau 💕</footer>
+      </div> 
+
+      <script src="app.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+</body>
+</html>

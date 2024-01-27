@@ -1,0 +1,434 @@
+body {
+      display: grid;
+      font-family: "Segoe UI", sans-serif;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: minmax(auto, auto);
+      color: #383838;
+      text-shadow: 0.4px 0.4px 0.4px rgba(0,0,0,.2);
+      background-color: #ffcccc; /* Màu đỏ nhạt */
+      margin: 0;
+      padding: 0;
+}
+
+img {max-width: 100%;}
+h1 {
+      font-weight: 700;
+      grid-column: span 3;
+      text-align: center;
+      color: #ec407a;
+      text-shadow: 0.7px 0.7px 0.5px rgba(0, 190, 253, 1);
+      
+}
+
+#line {
+      width: 100%;
+      height: 3px; /* Độ dày của đường nét */
+      background: linear-gradient(to right, #ff66b2 50%, #ff66b2 50%); /* Gradient từ màu hồng đến màu xanh lam */
+}
+  
+#wrapper {
+      display: grid;
+      grid-column: 3/11;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(auto, auto);
+      grid-row-gap: 10px;
+      width: 100%; /* Thêm dòng này */
+      margin: 0 auto; /* Căn giữa theo chiều ngang */
+}
+
+#clock-box, #info {
+      grid-column: span 3;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+}
+
+#clock-box #clock {
+      grid-column: 4 / 10;
+      background-image: linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%);
+      padding: .6rem 2rem;
+      padding-top: .8rem;
+      text-align: center;
+      font-size: 2.4rem;
+      border-radius: 10rem;
+      border: 1px solid #ff0000;
+      animation: color-transition 2s infinite ease-in-out;
+    }
+    
+    @keyframes color-transition {
+      0% {
+        border-color: #ff0000;
+      }
+      50% {
+        border-color: #00ff00;
+      }
+      100% {
+        border-color: #ff0000;
+      }
+    }
+date, time {
+      display: block;
+}
+
+date {
+      font-size: 18px;
+}
+
+time {
+      font-family: "Arial", sans-serif;
+      line-height: 3.2rem;
+      letter-spacing: 2px;
+}
+
+.avt {
+      width: 200px;
+      height: auto;
+      border-radius: 50px;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+      border: 3px dotted #fff;
+
+}
+
+#info {
+      margin-top: 1rem;
+      font-weight: 600;
+      font-size: 20px;
+}
+
+#heart {
+      grid-column: span 2;
+      display: grid;
+      grid-template-rows: 2;
+      font-size: 44px;
+      color: #b90d46;
+      align-self: center;
+      padding-bottom: 2.6rem;
+      text-align: center;
+      animation: heartbeat 1s infinite;
+}
+
+anni {
+      font-size: 16px;
+      letter-spacing: 0.2px;
+}
+
+
+#info .one {
+      grid-column: 3 / 6;
+      text-align: center;
+}
+
+#info .two {
+      grid-column: 8 / 11;
+      text-align: center;
+}
+
+footer {
+      grid-column: span 3;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: lighter;
+      margin-top: 6rem;
+}
+
+#video-player {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+}
+  
+#video-select {
+      width: 100%;
+      max-width: 200px; /* Tăng kích thước tối đa để chứa nhiều video hơn */
+      height: auto; /* Tự động tính chiều cao dựa trên tỉ lệ khung hình */
+      object-fit: cover;
+      border: 2px solid #3498db; /* Màu biên giới mạnh mẽ hơn */
+      border-radius: 12px; /* Bo tròn góc */
+}
+  
+.video-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly; /* Canh giữa các video */
+      background-color: #3498db;
+      border-radius: 12px;
+}
+  
+video {
+      width: 100%;
+      max-width: 300px; /* Tăng kích thước tối đa của video */
+      height: auto; /* Tự động tính chiều cao dựa trên tỉ lệ khung hình */
+      margin: 10px;
+      border: 2px solid #3498db; /* Màu biên giới mạnh mẽ hơn */
+      border-radius: 12px; /* Bo tròn góc */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tăng độ đậm của đổ bóng */
+      transition: transform 0.3s ease-in-out; /* Hiệu ứng chuyển động mềm mại */
+}
+  
+video:hover {
+      transform: scale(1.02); /* Phóng to video khi hover để tạo hiệu ứng */
+}
+
+ #control-video {
+      background-color: #3498db;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+}
+
+
+#music-player {
+      background-color: #ffcccc; /* Soft pink */
+      border-radius: 15px;
+      margin-left: 300px;
+      width: 400px; /* Chiều rộng cụ thể */
+  }
+  
+#music-info,
+#controls,
+#playlist {
+    padding: 20px;
+    text-align: center;
+    background-color:  #3498db; /* Light pink */
+}
+
+#volume {
+    margin-top: 7px;
+}
+
+#album-art,
+#seek-bar,
+#volume-bar {
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#song-details,
+#volume-controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#song-title {
+    font-size: 2rem;
+    margin: 0;
+    color: #ffffff; /* Reddish */
+}
+
+#artist {
+    color: #ffffff; /* Darker Reddish */
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+#controls,
+#playlist {
+    background-color: #f59a9a; /* Medium pink */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#seek-bar,
+#volume-bar {
+    width: 90%;
+    height: 3px;
+    background: #d6eaf8; /* Light blue */
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    margin-right: 10px;
+}
+
+#volume-bar {
+    width: 60%;
+}
+
+#seek-bar::-webkit-slider-thumb,
+#volume-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #3498db; /* Blue */
+    cursor: pointer;
+}
+
+#play-controls {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #ff9999; /* Light pink */
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, border-color 0.3s;
+    border-radius: 10px;
+    padding: 10px 36px;
+    margin: 8px;
+    outline: none;
+}
+
+button:hover {
+    background-color: #ff3333; /* Darker pink */
+}
+
+#playlist {
+    display: none;
+    background-color: #ff9999; /* Light pink */
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #ff6666; /* Medium pink */
+    color: #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: #ff3333; /* Darker pink */
+}
+
+#memories {
+      grid-column: span 3;
+      text-align: center;
+      margin-top: 2rem;   
+}
+    
+.card {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;   
+      margin-top: 20px;
+}
+    
+.card img {
+      width: 230px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 4px solid rgba(255, 255, 255, 0.6);
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img:hover {
+      transform: scale(1.1) rotateY(5deg);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      filter: brightness(1.1) saturate(1.2);
+      transition: transform 0.3s ease-in-out, box-shadow 0.2s ease-out;
+      transform: scale(1.1) rotateY(3deg) rotateX(-2deg);
+}
+   
+ 
+@media (max-width: 768px) {
+      h1{
+            grid-column: span 12;
+      }
+
+      #clock-box {
+            grid-column: span 12;
+            margin-right: 75px;
+      }
+      .avt {
+            width: 120px;
+            grid-column: span 12;
+        }
+      #clock,
+      #info .one,
+      #info .two,
+      #heart,
+      #memories{
+            width: 100%;
+            grid-column: span 12;
+      }
+
+      .card {
+            width: 100%;
+            grid-column: span 12; /* Full width for smaller screens */
+            grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns for cards on smaller screens */
+      }
+
+      #music-player {
+            max-width: 400px ;
+            grid-column: span 12;
+            display: flex;
+            margin-left: 60px;
+            border-radius: 10px;
+            background-color: #f59a9a;
+
+      }
+      #controls,
+      #playlist {
+            background-color: #f59a9a; /* Medium pink */
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+      }
+      button {
+            background-color: #ff9999; /* Light pink */
+            border: 2px solid #fff;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s, border-color 0.3s;
+            border-radius: none;
+            padding: 13px 25px;
+            margin: 8px;
+            outline: none;
+        }
+
+      #song-title {
+            font-size: 1.4rem;
+            margin: 0;
+            color: #ffffff; /* Reddish */
+        }
+        
+        #artist {
+            color: #ffffff; /* Darker Reddish */
+            padding-top: 10px;
+            font-size: 15px;
+        }
+        
+        .video-container {
+            justify-content: space-between;
+        }
+        
+        video {
+            max-width: calc(45%);
+        }
+      footer {
+            grid-column: span 12;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: lighter;
+            margin-top: 6rem;
+      }  
+}
+
+@keyframes heartbeat {
+      0%, 100% {
+          transform: scale(1);
+      }
+      50% {
+          transform: scale(1.1);
+      }
+}

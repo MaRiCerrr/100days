@@ -127,7 +127,7 @@ footer {
       text-align: center;
       font-size: 1.6rem;
       font-weight: lighter;
-      margin-top: 45rem;
+      margin-top: 1rem;
       position: relative;
 }
 
@@ -440,9 +440,6 @@ li:hover {
             text-align: center;
             font-size: 14px;
             font-weight: lighter;
-            margin-top: 74rem;
-            margin-bottom: 0.5rem;
-            ;
       }  
 }
 

@@ -377,6 +377,11 @@ li:hover {
             grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns for cards on smaller screens */
       }
 
+      .card img {
+            width: 200px;
+            height: 230px;
+            object-fit: cover;
+      }
       #music-player {
             width: 100%;
             grid-column: span 12;
@@ -418,20 +423,23 @@ li:hover {
             padding-top: 10px;
             font-size: 15px;
         }
-        
+      #video-player {
+            width: 100%;
+      }  
         .video-container {
             justify-content: space-between;
         }
         
         video {
-            max-width: calc(40%);
+            width: 270px;
         }
       footer {
             grid-column: span 12;
             text-align: center;
-            font-size: 1.4rem;
+            font-size: 0.8rem;
             font-weight: lighter;
-            margin-top: 6rem;
+            margin-top: 25rem;
+            margin-bottom: 0.5rem;
       }  
 }
 
